@@ -14,8 +14,8 @@
   .price,
   .unit-price {
     white-space: nowrap;
-    color: green;
-    font-weight: bold;
+    color: var(--price-color, var(--color-text-primary));
+    font-weight: var(--price-font-weight, 600);
   }
 
   .unit-price {
@@ -52,7 +52,7 @@
   }
 
   .compare-at-price {
-    color: rgb(var(--color-rgb, var(--color-foreground-rgb)) / var(--opacity-subdued-text));
+    color: var(--price-compare-color, rgb(var(--color-rgb, var(--color-foreground-rgb)) / var(--opacity-subdued-text)));
     text-decoration-line: line-through;
     text-decoration-thickness: 1.5px;
     text-decoration-color: rgb(var(--color-rgb, var(--color-foreground-rgb)) / var(--opacity-30));

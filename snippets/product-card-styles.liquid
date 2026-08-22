@@ -7,6 +7,10 @@
 {%- enddoc -%}
 
 {% stylesheet %}
+  .product-card {
+    border-radius: var(--product-card-radius);
+  }
+
   .product-grid__card.product-grid__card {
     display: flex;
     flex-flow: column nowrap;
@@ -16,7 +20,12 @@
     color: var(--color, var(--color-foreground));
     padding-block: var(--padding-block-start) var(--padding-block-end);
     padding-inline: var(--padding-inline-start) var(--padding-inline-end);
+    border-radius: inherit;
     overflow: hidden;
+  }
+
+  .product-card .text-block {
+    color: var(--color, var(--product-title-color, var(--color-text-primary)));
   }
 
   .product-grid__card .group-block > * {

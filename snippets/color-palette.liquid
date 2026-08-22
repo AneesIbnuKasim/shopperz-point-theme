@@ -8,6 +8,41 @@
   assign palette_lightest_brightness = -1
   assign palette_darkest = '#000000'
   assign palette_darkest_brightness = 256
+  assign brand_accent = settings.color_palette.color1
+  if brand_accent == blank
+    assign brand_accent = '#B88935'
+    assign brand_accent_rgb = '184 137 53'
+  elsif brand_accent.alpha == 0
+    assign brand_accent = '#B88935'
+    assign brand_accent_rgb = '184 137 53'
+  else
+    assign brand_accent_rgb = brand_accent.rgb
+  endif
+
+  assign brand_border = settings.color_palette.color2
+  if brand_border == blank
+    assign brand_border = '#E8DECF'
+    assign brand_border_rgb = '232 222 207'
+  elsif brand_border.alpha == 0
+    assign brand_border = '#E8DECF'
+    assign brand_border_rgb = '232 222 207'
+  else
+    assign brand_border_rgb = brand_border.rgb
+  endif
+
+  assign brand_ivory = settings.color_palette.background
+  if brand_ivory == blank
+    assign brand_ivory = '#FAF8F3'
+  elsif brand_ivory.alpha == 0
+    assign brand_ivory = '#FAF8F3'
+  endif
+
+  assign brand_charcoal = settings.color_palette.foreground
+  if brand_charcoal == blank
+    assign brand_charcoal = '#171717'
+  elsif brand_charcoal.alpha == 0
+    assign brand_charcoal = '#171717'
+  endif
 
   for palette_color in settings.color_palette
     if palette_color != blank and palette_color.alpha == 1
@@ -169,8 +204,26 @@
     --color-background-rgb: {{ settings.page_background_color.rgb }};
     --color-foreground: {{ settings.page_text_color }};
     --color-foreground-rgb: {{ settings.page_text_color.rgb }};
-    --color-border: {{ settings.page_text_color }};
-    --color-border-rgb: {{ settings.page_text_color.rgb }};
+    --color-border: {{ brand_border }};
+    --color-border-rgb: {{ brand_border_rgb }};
+    --color-accent: {{ brand_accent }};
+    --color-accent-rgb: {{ brand_accent_rgb }};
+    --color-brand-accent: var(--color-accent);
+    --color-brand-accent-rgb: var(--color-accent-rgb);
+    --color-surface: var(--color-background);
+    --color-surface-rgb: var(--color-background-rgb);
+    --color-surface-alt: color-mix(in srgb, var(--color-accent) 5%, var(--color-background));
+    --color-text-primary: var(--color-foreground);
+    --color-text-primary-rgb: var(--color-foreground-rgb);
+    --color-text-secondary: var(--color-foreground-subdued);
+    --color-border-subtle: rgb(var(--color-border-rgb) / var(--opacity-70));
+    --color-border-strong: color-mix(in srgb, var(--color-border) 70%, var(--color-foreground));
+    --color-focus: var(--color-accent);
+    --color-focus-rgb: var(--color-accent-rgb);
+    --brand-color-ivory: {{ brand_ivory }};
+    --brand-color-charcoal: {{ brand_charcoal }};
+    --brand-color-gold: {{ brand_accent }};
+    --brand-color-border: {{ brand_border }};
     --palette-lightest: {{ palette_lightest }};
     --palette-lightest-rgb: {{ palette_lightest.rgb }};
     --palette-darkest: {{ palette_darkest }};

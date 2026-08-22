@@ -108,6 +108,9 @@
       /* Background */
       --color-background: {{ background_color }};
       --color-background-rgb: {{ background_color.rgb }};
+      --color-surface: var(--color-background);
+      --color-surface-rgb: var(--color-background-rgb);
+      --color-surface-alt: color-mix(in srgb, var(--color-accent) 5%, var(--color-background));
 
       /* Opacity values adjusted for background brightness */
       {% render 'brightness-opacities', background: background_color %}
@@ -122,6 +125,11 @@
         --color-foreground-subdued: rgb({{ effective_text_color_rgb }} / var(--opacity-subdued-text));
         --color-border: {{ effective_border_color }};
         --color-border-rgb: {{ effective_border_color_rgb }};
+        --color-text-primary: var(--color-foreground);
+        --color-text-primary-rgb: var(--color-foreground-rgb);
+        --color-text-secondary: var(--color-foreground-subdued);
+        --color-border-subtle: rgb(var(--color-border-rgb) / var(--opacity-70));
+        --color-border-strong: color-mix(in srgb, var(--color-border) 70%, var(--color-foreground));
       {% endunless %}
     }
 
@@ -161,10 +169,15 @@
       --color-foreground-rgb: {{ text_color.rgb }};
       --color-foreground-muted: rgb({{ text_color.rgb }} / var(--opacity-muted-text));
       --color-foreground-subdued: rgb({{ text_color.rgb }} / var(--opacity-subdued-text));
+      --color-text-primary: var(--color-foreground);
+      --color-text-primary-rgb: var(--color-foreground-rgb);
+      --color-text-secondary: var(--color-foreground-subdued);
 
       {% if preset == 'ui' %}
         --color-border: {{ effective_no_bg_border }};
         --color-border-rgb: {{ effective_no_bg_border_rgb }};
+        --color-border-subtle: rgb(var(--color-border-rgb) / var(--opacity-70));
+        --color-border-strong: color-mix(in srgb, var(--color-border) 70%, var(--color-foreground));
       {% endif %}
 
     }

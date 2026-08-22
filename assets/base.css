@@ -235,13 +235,13 @@ p:empty {
 
 /* Focus */
 *:focus-visible {
-  outline: var(--focus-outline-width) solid currentcolor;
+  outline: var(--focus-outline-width) solid var(--focus-outline-color, currentcolor);
   outline-offset: var(--focus-outline-offset);
 }
 
 @supports not selector(:focus-visible) {
   *:focus {
-    outline: var(--focus-outline-width) solid currentcolor;
+    outline: var(--focus-outline-width) solid var(--focus-outline-color, currentcolor);
     outline-offset: var(--focus-outline-offset);
   }
 }
@@ -838,9 +838,10 @@ button.shopify-payment-button__button--unbranded {
   border: none;
   font-family: var(--font-paragraph--family);
   font-style: var(--font-paragraph--style);
-  font-weight: var(--font-paragraph--weight);
+  font-weight: var(--button-font-weight, var(--font-paragraph--weight));
   font-size: var(--font-paragraph--size);
   line-height: var(--font-paragraph--line-height);
+  letter-spacing: var(--button-letter-spacing);
   margin-block: 0;
   transition: color var(--animation-speed) var(--animation-easing),
     box-shadow var(--animation-speed) var(--animation-easing),
@@ -859,7 +860,7 @@ button.shopify-payment-button__button--unbranded {
 }
 
 .button:not(.button-secondary, .button-unstyled) {
-  outline-color: var(--button-focus-outline-color, var(--button-background-color));
+  outline-color: var(--button-focus-outline-color, var(--focus-outline-color, var(--button-background-color)));
 }
 
 .button-secondary {
@@ -871,12 +872,18 @@ button.shopify-payment-button__button--unbranded {
 button.shopify-payment-button__button--unbranded {
   font-family: var(--button-font-family-primary);
   text-transform: var(--button-text-case-primary);
+  border-radius: var(--style-border-radius-buttons-primary);
 }
 
 textarea,
 input:not([type='checkbox'], [type='radio']) {
   background-color: var(--color-input-background);
   border-color: var(--color-input-border);
+}
+
+textarea:focus-visible,
+input:not([type='checkbox'], [type='radio']):focus-visible {
+  outline-color: var(--focus-outline-color);
 }
 
 textarea::placeholder,
@@ -907,7 +914,7 @@ button.shopify-payment-button__button--unbranded {
   --button-background-color: var(--color-primary-button-background);
   --button-border-color: var(--color-primary-button-border);
   --button-border-width: var(--style-border-width-primary);
-  --button-focus-outline-color: var(--color-primary-button-focus-outline);
+  --button-focus-outline-color: var(--color-focus, var(--color-primary-button-focus-outline));
 }
 
 .button:hover,
@@ -935,12 +942,12 @@ button.shopify-payment-button__button--unbranded:hover:not([disabled]) {
   --button-background-color: var(--color-primary-button-background);
   --button-border-color: var(--color-primary-button-border);
   --button-border-width: var(--style-border-width-secondary);
-  --button-focus-outline-color: var(--color-primary-button-focus-outline);
+  --button-focus-outline-color: var(--color-focus, var(--color-primary-button-focus-outline));
 
   font-family: var(--button-font-family-primary);
   text-transform: var(--button-text-case-primary);
   border-radius: var(--style-border-radius-buttons-primary);
-  outline-color: var(--button-focus-outline-color, var(--button-background-color));
+  outline-color: var(--button-focus-outline-color, var(--focus-outline-color, var(--button-background-color)));
 }
 
 .button-custom:hover {
@@ -1274,6 +1281,11 @@ summary:hover {
   box-shadow: var(--input-box-shadow-focus);
 }
 
+.field__input:focus-visible {
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: var(--focus-outline-offset);
+}
+
 .field__input--button-radius {
   border-radius: var(--style-border-radius-buttons-primary);
 }
@@ -1283,8 +1295,9 @@ summary:hover {
 }
 
 .field__label {
-  color: rgb(var(--color-input-text-rgb) / var(--opacity-80));
+  color: var(--label-color, rgb(var(--color-input-text-rgb) / var(--opacity-80)));
   font-size: var(--font-paragraph--size);
+  letter-spacing: var(--label-letter-spacing);
   left: var(--input-padding-x);
   top: 50%;
   transform: translateY(-50%);
