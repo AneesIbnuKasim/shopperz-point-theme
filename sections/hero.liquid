@@ -461,7 +461,7 @@
 
 <div
   id="Hero-{{ section.id }}"
-  class="hero{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}{% if section.blocks.size == 0 and section.settings.section_height == 'auto' %} hero--no-blocks-auto-height{% endif %}{% if section.settings.stack_media_on_mobile %} hero--stack-mobile{% endif %}"
+  class="hero{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}{% if section.blocks.size == 0 and section.settings.section_height == 'auto' %} hero--no-blocks-auto-height{% endif %}{% if section.settings.stack_media_on_mobile %} hero--stack-mobile{% endif %}{% if section.settings.editorial_layout %} hero--editorial{% endif %}"
   style="
     --hero-border-style: {{ section.settings.border }};
     --hero-border-width: {{ section.settings.border_width }}px;
@@ -634,6 +634,66 @@
     overflow: hidden;
     position: relative;
     z-index: var(--layer-base);
+  }
+
+  .hero--editorial {
+    color: var(--brand-color-charcoal);
+  }
+
+  .hero--editorial .hero__container {
+    background: var(--brand-color-ivory);
+  }
+
+  @media screen and (min-width: 750px) {
+    .hero--editorial {
+      min-height: max(36rem, calc(var(--hero-min-height) - var(--hero-height-offset)));
+    }
+
+    .hero--editorial .hero__container {
+      min-height: inherit;
+    }
+
+    .hero--editorial .hero__media-grid {
+      inset: 0 0 0 51%;
+      grid-template-columns: repeat(var(--hero-media-count, 1), 1fr);
+    }
+
+    .hero--editorial .hero__content-wrapper {
+      align-self: center;
+      width: min(39%, 32rem);
+      min-height: auto;
+      height: auto;
+      padding-block: clamp(3rem, 6vw, 6rem);
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .hero--editorial,
+    .hero--editorial .hero__container {
+      min-height: 0;
+    }
+
+    .hero--editorial .hero__container {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .hero--editorial .hero__media-grid {
+      position: relative;
+      order: 0;
+      width: 100%;
+      height: clamp(18rem, 78vw, 28rem);
+      flex: none;
+    }
+
+    .hero--editorial .hero__content-wrapper {
+      order: 1;
+      width: 100%;
+      min-height: 0;
+      height: auto;
+      padding: 2rem var(--page-margin) 2.5rem;
+    }
   }
 
   /* Mobile/Desktop media visibility */
@@ -956,6 +1016,12 @@
     {
       "type": "header",
       "content": "t:content.layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "editorial_layout",
+      "label": "Use editorial split layout",
+      "default": false
     },
     {
       "type": "select",
