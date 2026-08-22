@@ -477,6 +477,10 @@
   }
 
   .header {
+    --shopperz-header-ivory: #fffdf8;
+    --shopperz-header-charcoal: #282624;
+    --shopperz-header-gold: #c6a15b;
+
     /* Set header paddings based on height setting */
     --header-padding: var(--padding-sm);
     --font-paragraph--line-height: 1;
@@ -493,6 +497,10 @@
       /* reset style from base.css */
       transition: color var(--header-content-transition-timing), border-color var(--header-content-transition-timing);
     }
+  }
+
+  #header-component {
+    color: var(--shopperz-header-charcoal);
   }
 
   #header-component :is(.header-menu, .dropdown-localization) {
@@ -747,6 +755,60 @@
   .header__row--top.divider--page-width .header__columns,
   .header__row--bottom {
     border-bottom: var(--border-bottom-width) solid var(--border-bottom-color, var(--color-border));
+  }
+
+  .header__row--top {
+    min-height: 76px;
+  }
+
+  .header__row--top .header__columns {
+    min-height: 76px;
+  }
+
+  .header__row--top .header-actions__action,
+  .header__row--top .search-action .header-actions__action,
+  .header__row--top .dropdown-localization__button {
+    border-radius: 0;
+  }
+
+  @media screen and (min-width: 750px) {
+    .header__row--top .header-logo {
+      padding-inline-end: var(--padding-lg);
+    }
+
+    .header__row--top .header__column--right {
+      gap: var(--gap-lg);
+    }
+
+    .header__row--top .header-actions__action,
+    .header__row--top .search-action .header-actions__action,
+    .header__row--top .dropdown-localization__button {
+      transition: color var(--animation-speed-fast) var(--animation-easing), background-color var(--animation-speed-fast) var(--animation-easing);
+    }
+
+    .header__row--top .header-actions__action:hover,
+    .header__row--top .search-action .header-actions__action:hover,
+    .header__row--top .dropdown-localization__button:hover {
+      color: var(--shopperz-header-gold);
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .header__row--top,
+    .header__row--top .header__columns {
+      min-height: 64px;
+    }
+
+    .header__row--top .header-logo {
+      max-width: min(46vw, 190px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .header,
+    .header[data-sticky-state] {
+      transition: none;
+    }
   }
 
   @media screen and (max-width: 749px) {

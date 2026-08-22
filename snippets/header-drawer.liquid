@@ -884,7 +884,7 @@
     left: 0;
     top: 0;
     padding: 0;
-    background-color: var(--color-background);
+    background-color: #fffdf8;
     overflow: auto;
     display: flex;
     border-right: var(--style-border-drawer);
@@ -942,6 +942,7 @@
     align-content: space-between;
     overflow-y: auto;
     height: 100%;
+    border-top: 1px solid rgb(40 38 36 / 0.1);
   }
 
   .menu-drawer__inner-submenu {
@@ -1095,7 +1096,7 @@
     justify-content: space-between;
 
     &:hover {
-      color: var(--menu-top-level-font-color);
+      color: #a9813b;
     }
   }
 
@@ -1157,6 +1158,11 @@
     text-decoration: none;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .menu-drawer__menu-item:focus-visible {
+    outline-color: #c6a15b;
+    outline-offset: 3px;
   }
 
   .menu-drawer__menu-item:has(> .menu-drawer__link-image) {

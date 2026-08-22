@@ -42,7 +42,10 @@
 
 {% stylesheet %}
   .announcement-bar {
+    --shopperz-gold: #c6a15b;
+
     border-block-end: var(--border-bottom-width) solid var(--color-border);
+    letter-spacing: 0.015em;
   }
 
   .announcement-bar__slider {
@@ -62,6 +65,10 @@
     width: calc(100% - var(--button-size) * 2);
     max-width: 680px;
     margin-inline: auto;
+  }
+
+  .announcement-bar__text {
+    font-weight: 500;
   }
 
   .announcement-bar__slides > * {
@@ -122,6 +129,17 @@
   .announcement-bar__link {
     position: absolute;
     inset: 0;
+  }
+
+  .announcement-bar__link:focus-visible {
+    outline-color: var(--shopperz-gold);
+    outline-offset: -3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .announcement-bar__slide {
+      transition: none;
+    }
   }
 {% endstylesheet %}
 
