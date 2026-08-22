@@ -24,7 +24,7 @@
             "weight": "",
             "letter_spacing": "normal",
             "case": "none",
-            "text_color": "{{ settings.color_palette.foreground }}"
+            "text_color": "{{ settings.color_palette.background }}"
           },
           "blocks": {}
         }
