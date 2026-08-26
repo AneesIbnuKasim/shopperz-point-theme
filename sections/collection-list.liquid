@@ -29,6 +29,7 @@
   class="
     section
     section--{{ section.settings.section_width }}
+    collection-list-shopperz-point
     {% if section.settings.background_color != blank %}color-custom-{{ section.id }}{% endif %}
     section-resource-list
     spacing-style
@@ -78,6 +79,13 @@
     test_id: 'collections-list-grid'
   %}
 </div>
+
+{% stylesheet %}
+  .collection-list-shopperz-point .collection-card__image {
+    overflow: hidden;
+  }
+
+{% endstylesheet %}
 
 {% schema %}
 {
