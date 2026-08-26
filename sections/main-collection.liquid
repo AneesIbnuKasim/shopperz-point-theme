@@ -92,6 +92,46 @@
   </results-list>
 </collection-component>
 
+{% stylesheet %}
+  .main-collection-grid .product-grid__item {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .main-collection-grid [product-grid-view='default'] .product-grid__card {
+    padding-inline: 4px;
+  }
+
+  .main-collection-grid .product-badges__badge {
+    --badge-font-size: 7px;
+    --badge-rectangle-padding-block: 3px;
+    --badge-rectangle-padding-inline: 6px;
+
+    border-radius: 4px;
+  }
+
+  .main-collection-grid .product-badges__badge.color-custom-badge-sale {
+    background: rgb(168 138 90 / 0.14);
+    color: #8f7449;
+  }
+
+  .main-collection-grid .product-badges__badge.color-custom-badge-sold-out {
+    background: rgb(38 35 31 / 0.86);
+    color: #fffaf0;
+  }
+
+  @media screen and (min-width: 750px) {
+    .main-collection-grid [product-grid-view='default'] .product-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .main-collection-grid [product-grid-view='default'] .product-grid__card {
+      padding-inline: 8px;
+    }
+  }
+{% endstylesheet %}
+
 {% schema %}
 {
   "name": "t:names.collection_container",
