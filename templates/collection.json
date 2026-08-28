@@ -15,7 +15,7 @@
           "type": "text",
           "name": "t:names.eyebrow",
           "settings": {
-            "text": "<p>EXPLORE THE COLLECTION</p>",
+            "text": "<p>SHOP THE EDIT</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -40,7 +40,7 @@
           "type": "text",
           "name": "t:names.title",
           "settings": {
-            "text": "<h1>{{ closest.collection.title }}</h1>",
+            "text": "<h1>{% if closest.collection.handle == 'all' %}Products{% else %}{{ closest.collection.title }}{% endif %}</h1>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -64,7 +64,7 @@
           "type": "text",
           "name": "t:names.description",
           "settings": {
-            "text": "{{ closest.collection.description }}",
+            "text": "{% if closest.collection.handle == 'all' %}<p>Thoughtfully selected pieces for gifting, celebrating, and creating meaningful moments.</p>{% else %}{{ closest.collection.description }}{% endif %}",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -115,8 +115,8 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 56,
-        "padding-block-end": 40
+        "padding-block-start": 44,
+        "padding-block-end": 32
       }
     },
     "main": {

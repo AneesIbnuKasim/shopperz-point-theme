@@ -293,7 +293,7 @@
             "placement": "below_image",
             "horizontal_alignment": "center",
             "vertical_alignment": "flex-start",
-            "collection_card_gap": 0,
+            "collection_card_gap": 8,
             "background_color": "",
             "border": "solid",
             "border_width": 1,
@@ -363,7 +363,7 @@
         ],
         "layout_type": "grid",
         "carousel_on_mobile": true,
-        "columns": 4,
+        "columns": 3,
         "mobile_columns": "2",
         "mobile_card_size": "44cqw",
         "columns_gap": 22,
@@ -375,8 +375,8 @@
         "section_width": "page-width",
         "gap": 36,
         "background_color": "",
-        "padding-block-start": 64,
-        "padding-block-end": 64
+        "padding-block-start": 56,
+        "padding-block-end": 56
       }
     },
     "product_list_fa6P9H": {

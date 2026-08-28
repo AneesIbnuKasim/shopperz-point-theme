@@ -37,7 +37,7 @@
 {% # theme-check-disable-next-line UnknownFilter %}
 <collection-component view-event-payload="{{ collection | standard_event_data: 'view' | escape }}">
   <results-list
-    class="section product-grid-container{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+    class="section product-grid-container{% if collection.handle == 'all' %} products-catalog{% endif %}{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
     style="--padding-block-start: {{ section.settings.padding-block-start }}px; --padding-block-end: {{ section.settings.padding-block-end }}px;"
     section-id="{{ section.id }}"
     infinite-scroll="{{ section.settings.enable_infinite_scroll }}"
@@ -119,6 +119,15 @@
   .main-collection-grid .product-badges__badge.color-custom-badge-sold-out {
     background: rgb(38 35 31 / 0.86);
     color: #fffaf0;
+  }
+
+  .products-catalog .product-grid__item {
+    border-radius: var(--style-border-radius-sm);
+  }
+
+  .products-catalog .product-card__content {
+    --product-card-gap: 10px;
+    row-gap: var(--product-card-gap);
   }
 
   @media screen and (min-width: 750px) {

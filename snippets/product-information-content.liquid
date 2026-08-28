@@ -10,6 +10,7 @@
   @param {string} media_gallery - Captured HTML for the product media gallery block
   @param {string} product_details - Captured HTML for the product details block
   @param {string} additional_blocks - Captured HTML for additional section blocks
+  @param {boolean} [is_main_product] - Whether this is the main product page layout
 
   @example
   {% capture media_gallery %}
@@ -30,7 +31,8 @@
     settings: section.settings,
     media_gallery: media_gallery,
     product_details: product_details,
-    additional_blocks: additional_blocks
+    additional_blocks: additional_blocks,
+    is_main_product: true
   %}
 {% enddoc %}
 
@@ -86,7 +88,7 @@
   class="section-background{% if settings.background_color != blank %} color-custom-{{ section_id }}{% endif %}"
 ></div>
 <div
-  class="product-information section section--{{ content_width }} spacing-style{% if settings.background_color != blank %} color-custom-{{ section_id }}{% endif %} relative"
+  class="product-information{% if is_main_product %} product-information--main-product{% endif %} section section--{{ content_width }} spacing-style{% if settings.background_color != blank %} color-custom-{{ section_id }}{% endif %} relative"
   style="{% render 'spacing-style', settings: settings %} --gap: {{ settings.gap }}px;"
   data-testid="product-information"
 >
@@ -324,5 +326,122 @@
   /* If the header is sticky, make product details content stick underneath the header */
   body:has(#header-group #header-component[data-sticky-state='active']) .product-details.sticky-content--desktop {
     --sticky-header-offset: var(--header-height);
+  }
+
+  /* Main product page polish. The dedicated hook keeps featured product surfaces unchanged. */
+  .product-information--main-product {
+    --product-page-border: rgb(var(--color-foreground-rgb) / 0.14);
+    --product-page-accent: rgb(var(--color-foreground-rgb) / 0.72);
+  }
+
+  .product-information--main-product .product-information__grid {
+    column-gap: clamp(var(--gap-xl), 4vw, var(--gap-3xl));
+  }
+
+  .product-information--main-product .product-information__media {
+    padding-inline: 0;
+  }
+
+  .product-information--main-product .product-media-container {
+    border: 1px solid var(--product-page-border);
+    border-radius: var(--style-border-radius-md);
+    overflow: hidden;
+  }
+
+  .product-information--main-product .product-details {
+    padding-inline: 0;
+  }
+
+  .product-information--main-product .product-details > .group-block {
+    width: 100%;
+  }
+
+  .product-information--main-product .product-details .text-block h1 {
+    font-family: var(--font-heading--family);
+    font-weight: var(--font-heading--weight);
+    line-height: 1.12;
+  }
+
+  .product-information--main-product .product-details product-price {
+    --price-font-weight: 600;
+    --price-color: var(--color-foreground);
+    letter-spacing: 0.01em;
+  }
+
+  .product-information--main-product .product-details .compare-at-price {
+    color: var(--product-page-accent);
+  }
+
+  .product-information--main-product .product-details .variant-option + .variant-option {
+    margin-top: var(--gap-lg);
+  }
+
+  .product-information--main-product .product-details .variant-option__button-label,
+  .product-information--main-product .product-details .variant-option__select-wrapper,
+  .product-information--main-product .product-details .quantity-selector {
+    border-color: var(--product-page-border);
+    border-radius: var(--style-border-radius-sm);
+  }
+
+  .product-information--main-product .product-details .variant-option__button-label {
+    min-height: var(--minimum-touch-target);
+  }
+
+  .product-information--main-product .product-details .variant-option__button-label:has(input:checked) {
+    border-color: var(--color-foreground);
+    box-shadow: inset 0 0 0 1px var(--color-foreground);
+  }
+
+  .product-information--main-product .product-details .add-to-cart-button {
+    border-radius: var(--style-border-radius-sm);
+    min-height: 3.25rem;
+    font-weight: 600;
+  }
+
+  .product-information--main-product .product-details .add-to-cart-button:hover:not(:disabled) {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    border-color: var(--color-foreground);
+  }
+
+  .product-information--main-product .product-details .accelerated-checkout-block {
+    margin-block-start: var(--gap-xs);
+  }
+
+  .product-information--main-product .product-details .accordion,
+  .product-information--main-product .product-details .disclosure {
+    border-color: var(--product-page-border);
+  }
+
+  .product-information--main-product .product-details .text-block.rte {
+    color: rgb(var(--color-foreground-rgb) / 0.78);
+  }
+
+  @media screen and (min-width: 750px) {
+    .product-information--main-product .product-information__grid:not(.product-information--media-none) {
+      grid-template-columns: minmax(0, 1.35fr) minmax(22rem, 0.95fr);
+    }
+
+    .product-information--main-product .product-information__grid.product-information--media-right {
+      grid-template-columns: minmax(22rem, 0.95fr) minmax(0, 1.35fr);
+    }
+
+    .product-information--main-product .product-details > .group-block {
+      padding-block: var(--padding-2xl);
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .product-information--main-product {
+      padding-inline: var(--padding-lg);
+    }
+
+    .product-information--main-product .product-information__grid {
+      row-gap: var(--gap-2xl);
+    }
+
+    .product-information--main-product .product-details > .group-block {
+      padding-block: 0;
+    }
   }
 {% endstylesheet %}

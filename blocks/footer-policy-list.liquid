@@ -1,49 +1,32 @@
 
 {% if shop.policies.size > 0 %}
-  <anchored-popover-component
-    data-hover-triggered="true"
+  <nav
+    class="footer-policy-nav"
+    aria-label="{{ 'content.terms_and_policies' | t }}"
+    {{ block.shopify_attributes }}
   >
-    <button
-      class="policy-list-trigger button-unstyled"
-      popovertarget="terms-policies-popover"
-      popovertargetaction="toggle"
-      ref="trigger"
+    <ul
+      class="
+        policy_list list-unstyled
+        custom-typography
+        {% if block.settings.font_size != "" %}custom-font-size{% endif %}
+      "
       style="
         {% render 'typography-style', preset: 'custom', settings: block.settings %}
         {% if block.settings.text_color != blank %}--color-utilities: {{ block.settings.text_color }};{% endif %}
       "
-      {{ block.shopify_attributes }}
     >
-      {{ 'content.terms_and_policies' | t }}
-    </button>
-    <div
-      class="terms-policies-popover color-custom-popover"
-      id="terms-policies-popover"
-      popover="auto"
-      ref="popover"
-    >
-      <ul
-        class="
-          policy_list list-unstyled
-          custom-typography
-          {% if block.settings.font_size != "" %}custom-font-size{% endif %}
-        "
-      >
-        {%- for policy in shop.policies -%}
-          {%- if policy != blank -%}
-            <li>
-              <a
-                href="{{ policy.url }}"
-                class="footer-utilities__text"
-              >
-                {{- policy.title | escape -}}
-              </a>
-            </li>
-          {%- endif -%}
-        {%- endfor -%}
-      </ul>
-    </div>
-  </anchored-popover-component>
+      {%- for policy in shop.policies -%}
+        {%- if policy != blank -%}
+          <li>
+            <a href="{{ policy.url }}" class="footer-utilities__text">
+              {{- policy.title | escape -}}
+            </a>
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </nav>
 {% endif %}
 
 {% stylesheet %}
@@ -52,6 +35,26 @@
     cursor: pointer;
     font-size: var(--font-size, 0.75rem);
     text-transform: var(--text-transform, none);
+  }
+
+  .footer-policy-nav .policy_list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-xs) var(--gap-md);
+  }
+
+  .footer-policy-nav .policy_list li {
+    border-radius: 0;
+  }
+
+  .footer-policy-nav .policy_list li a {
+    padding: 0;
+  }
+
+  .footer-policy-nav .policy_list li:is(:hover, :focus-within) {
+    background: transparent;
   }
 
   .policy_list {

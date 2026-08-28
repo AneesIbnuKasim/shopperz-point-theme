@@ -114,19 +114,25 @@
     overflow: hidden;
   }
 
+  .main-collection-list-shopperz-point .collection-card__image .resource-image__image {
+    object-fit: contain;
+    object-position: center;
+  }
+
   .main-collection-list-shopperz-point .collection-card__content {
     padding-block: 0.15rem 0.35rem;
   }
 
   .main-collection-list-shopperz-point .collection-card__content .text-block {
-    text-align: left;
+    width: 100%;
+    text-align: center;
   }
 
   .main-collection-list-shopperz-point .collection-card__content .text-block > p {
     color: var(--color-foreground);
-    font-family: var(--font-subheading--family);
-    font-size: 0.98rem;
-    font-weight: var(--font-subheading--weight);
+    font-family: var(--font-heading--family);
+    font-size: var(--font-size--md);
+    font-weight: var(--font-heading--weight);
     line-height: 1.35;
   }
 
@@ -162,7 +168,7 @@
     }
 
     .main-collection-list-shopperz-point .collection-card__content .text-block > p {
-      font-size: 0.9rem;
+      font-size: var(--font-size--sm);
     }
   }
 {% endstylesheet %}

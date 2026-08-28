@@ -10,7 +10,7 @@
   class="section-background{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
 ></div>
 <div
-  class="section section--{{ section.settings.section_width }}{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+  class="section footer-section section--{{ section.settings.section_width }}{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
 >
   {% liquid
     assign total_blocks = section.blocks.size
@@ -64,6 +64,45 @@
     align-items: start;
   }
 
+  .footer-content > * {
+    min-width: 0;
+  }
+
+  .footer-content .text-block h2 {
+    margin-block: 0;
+    font-family: var(--font-heading--family);
+    font-weight: var(--font-heading--weight);
+    letter-spacing: var(--letter-spacing--heading-normal);
+  }
+
+  .footer-content .text-block p {
+    color: var(--color-foreground-subdued);
+  }
+
+  .footer-content .email-signup-block {
+    width: 100%;
+  }
+
+  .footer-content .email-signup__heading {
+    padding-block: 0 var(--padding-sm);
+    font-family: var(--font-heading--family);
+    font-weight: var(--font-heading--weight);
+  }
+
+  .footer-content .email-signup__input-group {
+    border-radius: var(--style-border-radius-sm) !important;
+  }
+
+  .footer-content .email-signup__input,
+  .footer-content .email-signup__button--integrated {
+    border-radius: var(--style-border-radius-sm) !important;
+  }
+
+  .footer-content .email-signup__input {
+    color: var(--color-input-text);
+    background-color: var(--color-input-background);
+  }
+
   .footer-content .menu__heading__default {
     font-weight: var(--font-heading--weight);
   }
@@ -86,6 +125,12 @@
   @media screen and (min-width: 990px) {
     .footer-content {
       grid-template-columns: repeat(var(--grid-columns), 1fr);
+      gap: max(var(--footer-gap), var(--gap-3xl));
+    }
+
+    .footer-content[style*='--grid-columns: 2'] {
+      grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.85fr);
+      align-items: center;
     }
 
     /* Single item centered */
@@ -145,6 +190,9 @@
     },
     {
       "type": "email-signup"
+    },
+    {
+      "type": "footer-whatsapp"
     }
   ],
   "enabled_on": {

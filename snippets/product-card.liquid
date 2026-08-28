@@ -8,6 +8,7 @@
   @param {object} [block] - The block object
   @param {number} [product_card_gap] - The gap between the product card children (overrides block settings)
   @param {string} [product_view_context] - The context in which the product card is being rendered. Used for standard events.
+  @param {string} [section_id] - Section ID used by the native quick-add component.
 {%- enddoc -%}
 
 {% assign block_settings = block.settings %}
@@ -114,6 +115,16 @@
     "
   >
     {{ children }}
+    {% unless onboarding %}
+      {% if product.available and settings.quick_add or settings.mobile_quick_add %}
+        {% assign product_card_add_to_cart_text = 'products.product.add_to_cart' | t %}
+        {% render 'quick-add',
+          product: product,
+          section_id: section_id,
+          add_to_cart_text: product_card_add_to_cart_text
+        %}
+      {% endif %}
+    {% endunless %}
   </div>
 </product-card>
 

@@ -28,6 +28,121 @@
     color: var(--color, var(--product-title-color, var(--color-text-primary)));
   }
 
+  .product-card .card-gallery {
+    --gallery-aspect-ratio: 1;
+    border-radius: var(--style-border-radius-sm);
+  }
+
+  .product-card .card-gallery .product-media-container {
+    --gallery-aspect-ratio: 1;
+    border-radius: inherit;
+  }
+
+  .product-card .card-gallery .product-media-container img,
+  .product-card .card-gallery .product-media-container video,
+  .product-card .card-gallery .product-media-container .deferred-media__poster-image {
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .product-card product-price .price {
+    font-size: 1.12em;
+    font-weight: 600;
+  }
+
+  .product-card product-price .compare-at-price {
+    font-size: 0.88em;
+    font-weight: 400;
+  }
+
+  /* Keep the native quick-add form in the card flow so its CTA follows the price. */
+  .product-card__content > .quick-add {
+    position: relative;
+    inset: auto;
+    z-index: var(--layer-raised);
+    display: grid;
+    grid-template-rows: 0fr;
+    min-height: 0;
+    pointer-events: none;
+  }
+
+  .product-card__content > .quick-add > * {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .product-card__content > .quick-add .quick-add__product-form-component,
+  .product-card__content > .quick-add .quick-add__button {
+    position: static;
+  }
+
+  .product-card__content > .quick-add .quick-add__product-form-component .shopify-product-form {
+    height: auto;
+  }
+
+  .product-card__content > .quick-add .quick-add__button {
+    display: flex;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    min-height: var(--button-size-md);
+    justify-content: center;
+    padding-inline: var(--padding-md);
+    padding-block: var(--padding-2xs);
+    border: 1px solid var(--color-foreground);
+    border-radius: var(--style-border-radius-sm);
+    background: var(--color-foreground);
+    color: var(--color-background);
+    box-shadow: none;
+    font-weight: var(--button-font-weight);
+    letter-spacing: var(--button-letter-spacing);
+    opacity: 0;
+    scale: 1;
+    translate: 0 4px;
+  }
+
+  .product-card__content > .quick-add .quick-add__button:hover:not(:disabled),
+  .product-card__content > .quick-add .quick-add__button:focus-visible {
+    background: color-mix(in srgb, var(--color-foreground) 90%, var(--color-background));
+    color: var(--color-background);
+    opacity: 1;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .product-card__content > .quick-add {
+      transition: grid-template-rows var(--animation-speed) var(--ease-out-cubic);
+    }
+
+    .product-card__content > .quick-add .quick-add__button {
+      transition: opacity 180ms var(--ease-out-cubic), translate 180ms var(--ease-out-cubic),
+        background-color 180ms var(--ease-out-cubic), color 180ms var(--ease-out-cubic);
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    .product-card:is(:hover, :focus-within) .product-card__content > .quick-add {
+      grid-template-rows: 1fr;
+      pointer-events: auto;
+    }
+
+    .product-card:is(:hover, :focus-within) .product-card__content > .quick-add .quick-add__button {
+      opacity: 1;
+      translate: 0;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .product-card__content > .quick-add {
+      display: var(--quick-add-mobile-display, none);
+      grid-template-rows: 1fr;
+      pointer-events: auto;
+    }
+
+    .product-card__content > .quick-add .quick-add__button {
+      opacity: var(--quick-add-mobile-opacity, 0);
+    }
+  }
+
   .product-grid__card .group-block > * {
     @media screen and (max-width: 749px) {
       flex-direction: column;

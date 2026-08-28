@@ -56,12 +56,12 @@
             "text_LWt8Pz": {
               "type": "text",
               "settings": {
-                "text": "<h2>Join our whatsapp channel</h2>",
+                "text": "<h2>SHOPPERZ POINT</h2>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "h4",
-                "font": "var(--font-body--family)",
+                "font": "var(--font-heading--family)",
                 "font_size": "1rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
@@ -81,7 +81,7 @@
             "text_f9CFLH": {
               "type": "text",
               "settings": {
-                "text": "<p>Get exclusive deals and early access to new products.</p>",
+                "text": "<p>Thoughtfully chosen gifts for meaningful moments.</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -109,48 +109,27 @@
             "text_f9CFLH"
           ]
         },
-        "email_signup_crihX7": {
-          "type": "email-signup",
+        "whatsapp_channel": {
+          "type": "footer-whatsapp",
           "settings": {
-            "width": "fill",
-            "custom_width": 100,
-            "heading": "",
-            "heading_text_color": "",
-            "heading_preset": "h3",
-            "border_style": "all",
-            "input_style": "custom",
-            "border_width": 1,
-            "border_radius": 100,
-            "input_background_color": "{{ settings.color_palette.background }}",
-            "input_text_color": "{{ settings.color_palette.color1 }}",
-            "input_border_color": "{{ settings.color_palette.color2 }}",
-            "input_type_preset": "paragraph",
-            "style_class": "button-unstyled",
-            "custom_button_background": "{{ settings.color_palette.foreground }}",
-            "custom_button_text": "{{ settings.color_palette.background }}",
-            "custom_button_border": "{{ settings.color_palette.background }}",
-            "link_text_color": "",
-            "display_type": "arrow",
-            "label": "Sign up",
-            "integrated_button": true,
-            "button_type_preset": "paragraph",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "heading": "STAY CONNECTED",
+            "text": "Get updates, new arrivals and gifting inspiration.",
+            "label": "JOIN OUR WHATSAPP CHANNEL",
+            "link": "",
+            "open_in_new_tab": true
           },
           "blocks": {}
         }
       },
       "block_order": [
         "group_H6VpwJ",
-        "email_signup_crihX7"
+        "whatsapp_channel"
       ],
       "name": "t:names.footer",
       "settings": {
         "section_width": "page-width",
         "gap": 20,
-        "background_color": "{{ settings.color_palette.background }}",
+        "background_color": "#faf8f3",
         "padding-block-start": 30,
         "padding-block-end": 30
       }
@@ -207,7 +186,7 @@
       "settings": {
         "section_width": "page-width",
         "gap": 24,
-        "background_color": "{{ settings.color_palette.background }}",
+        "background_color": "#faf8f3",
         "divider_thickness": 1,
         "divider_color": "{{ settings.color_palette.color2 }}",
         "padding-block-start": 20,

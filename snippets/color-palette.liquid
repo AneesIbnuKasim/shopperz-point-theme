@@ -210,12 +210,16 @@
     --color-accent-rgb: {{ brand_accent_rgb }};
     --color-brand-accent: var(--color-accent);
     --color-brand-accent-rgb: var(--color-accent-rgb);
-    --color-surface: var(--color-background);
+    /* Shopperz Point surface hierarchy: warm, quiet contrast without relying on cards or shadows. */
+    --color-surface: color-mix(in srgb, var(--color-background) 58%, var(--palette-lightest));
     --color-surface-rgb: var(--color-background-rgb);
-    --color-surface-alt: color-mix(in srgb, var(--color-accent) 5%, var(--color-background));
+    --color-surface-alt: color-mix(in srgb, var(--color-background) 88%, var(--color-border));
+    --color-surface-raised: color-mix(in srgb, var(--color-background) 78%, var(--palette-lightest));
+    --color-surface-accent: color-mix(in srgb, var(--color-background) 84%, var(--color-accent));
     --color-text-primary: var(--color-foreground);
     --color-text-primary-rgb: var(--color-foreground-rgb);
     --color-text-secondary: var(--color-foreground-subdued);
+    --color-text-muted: rgb(var(--color-foreground-rgb) / var(--opacity-muted-text));
     --color-border-subtle: rgb(var(--color-border-rgb) / var(--opacity-70));
     --color-border-strong: color-mix(in srgb, var(--color-border) 70%, var(--color-foreground));
     --color-focus: var(--color-accent);
