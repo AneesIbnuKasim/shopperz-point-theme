@@ -28,6 +28,12 @@
     color: var(--color, var(--product-title-color, var(--color-text-primary)));
   }
 
+  /* Give titles a shared two-line rhythm without truncating longer names. */
+  .product-card__content > a.user-select-text > .text-block {
+    width: 100%;
+    min-height: 2.8em;
+  }
+
   .product-card .card-gallery {
     --gallery-aspect-ratio: 1;
     border-radius: var(--style-border-radius-sm);
