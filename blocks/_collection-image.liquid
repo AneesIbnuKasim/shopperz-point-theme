@@ -29,7 +29,8 @@
 {% if block_settings.collection.featured_image %}
   <div
     class="collection-image spacing-style collection-image-{{ block.id }}"
-    style="--ratio: {{ ratio }}; --image-width: {{ image_width }}%; {% render 'spacing-style', settings: block_settings %}"
+    {% comment %} style="--ratio: {{ ratio }}; --image-width: {{ image_width }}%; {% render 'spacing-style', settings: block_settings %}" {% endcomment %}
+     style="--ratio: {{ ratio }}; {% render 'spacing-style', settings: block_settings %}"
   >
     {% liquid
       assign media_width_desktop = 100 | divided_by: 2 | append: 'vw'
