@@ -17,7 +17,7 @@
         "announcement_BxgCk9": {
           "type": "_announcement",
           "settings": {
-            "text": "Use code NEW10 to get 10% off on first order",
+            "text": "USE CODE NEW10 — GET 10% OFF YOUR FIRST ORDER",
             "link": "",
             "font": "var(--font-subheading--family)",
             "font_size": "0.875rem",
@@ -29,9 +29,7 @@
           "blocks": {}
         }
       },
-      "block_order": [
-        "announcement_BxgCk9"
-      ],
+      "block_order": ["announcement_BxgCk9"],
       "name": "t:names.announcement_bar",
       "settings": {
         "speed": 5,
@@ -61,7 +59,7 @@
           "static": true,
           "settings": {
             "menu": "main-menu",
-            "background_color": "#fffdf8",
+            "background_color": "#FAF8F3",
             "text_color": "",
             "type_font_primary_size": "0.875rem",
             "menu_font_style": "normal",
@@ -104,14 +102,6 @@
         "divider_color": "",
         "border_width": 0,
         "bottom_border_color": "",
-        "actions_display_style": "icon",
-        "actions_font_size": "0.875rem",
-        "actions_font": "body",
-        "actions_text_case": "none",
-        "background_color_top": "#fffdf8",
-        "text_color_top": "",
-        "background_color_bottom": "",
-        "text_color_bottom": "",
         "bubble_style": "default",
         "bubble_background_color": "",
         "bubble_text_color": "",
@@ -127,8 +117,5 @@
       }
     }
   },
-  "order": [
-    "header_announcements_9jGBFp",
-    "header_section"
-  ]
+  "order": ["header_announcements_9jGBFp", "header_section"]
 }

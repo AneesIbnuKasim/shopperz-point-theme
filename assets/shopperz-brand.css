@@ -1,0 +1,242 @@
+/* Shopperz Point premium visual layer. Kept separate from Horizon base.css so the native architecture remains intact. */
+
+:root {
+  --shopperz-ivory: #FAF8F3;
+  --shopperz-beige: #F3EFE7;
+  --shopperz-charcoal: #282624;
+  --shopperz-gold: #C6A15B;
+  --shopperz-rule: #DED7CA;
+}
+
+body {
+  background: var(--shopperz-ivory);
+  color: var(--shopperz-charcoal);
+}
+
+/* Header: quiet, editorial, and deliberately flat. */
+#header-group .header,
+#header-group .header__row {
+  background-color: var(--shopperz-ivory);
+}
+
+#header-group .header__row--top {
+  border-bottom: 1px solid var(--shopperz-rule);
+}
+
+#header-group .header-menu__link,
+#header-group .header-actions__action,
+#header-group .dropdown-localization__button {
+  color: var(--shopperz-charcoal);
+  transition: color 180ms ease;
+}
+
+#header-group .header-menu__link:hover,
+#header-group .header-menu__link:focus-visible,
+#header-group .header-actions__action:hover,
+#header-group .header-actions__action:focus-visible,
+#header-group .dropdown-localization__button:hover,
+#header-group .dropdown-localization__button:focus-visible {
+  color: var(--shopperz-gold);
+}
+
+#header-group .header__underlay-open,
+#header-group .header__underlay-closed {
+  background: var(--shopperz-ivory);
+}
+
+/* Announcement bar: brand accent without decorative effects. */
+#header-group .announcement-bar,
+#header-group .header-announcements {
+  background: var(--shopperz-charcoal);
+  color: var(--shopperz-ivory);
+  border-bottom-color: var(--shopperz-gold);
+}
+
+/* Editorial hero. */
+.hero--editorial {
+  background: var(--shopperz-ivory);
+}
+
+.hero--editorial .hero__content {
+  padding-block: clamp(2rem, 5vw, 5rem);
+}
+
+.hero--editorial .hero__content h1,
+.hero--editorial .hero__content .h1 {
+  max-width: 11ch;
+  color: var(--shopperz-charcoal);
+  text-wrap: balance;
+}
+
+.hero--editorial .hero__media,
+.hero--editorial .hero__media-wrapper {
+  border-radius: 0;
+}
+
+/* Homepage section rhythm. */
+.section-resource-list,
+.section.footer-section {
+  background: var(--shopperz-ivory);
+}
+
+.section-resource-list__content {
+  margin-block-end: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* Circular category photography, while retaining Horizon's native resource list/carousel. */
+.collection-list-shopperz-point .resource-list__item {
+  min-width: 0;
+}
+
+.collection-list-shopperz-point .collection-card__image {
+  width: clamp(80px, 11vw, 140px);
+  aspect-ratio: 1;
+  margin-inline: auto;
+  border-radius: 50%;
+  background: var(--shopperz-beige);
+}
+
+.collection-list-shopperz-point .collection-card__image .resource-image__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.collection-list-shopperz-point .collection-card__content {
+  padding: 0.8rem 0 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.collection-list-shopperz-point .collection-card__content .text-block,
+.collection-list-shopperz-point .collection-title {
+  color: var(--shopperz-charcoal);
+  text-align: center;
+}
+
+.collection-list-shopperz-point .collection-card__content a:focus-visible {
+  outline: 2px solid var(--shopperz-gold);
+  outline-offset: 5px;
+}
+
+/* Product catalog: natural imagery and restrained catalog rules. */
+.product-card .card-gallery {
+  background: var(--shopperz-beige);
+  border: 1px solid var(--shopperz-rule);
+  box-shadow: none;
+}
+
+.product-card .card-gallery .product-media-container img,
+.product-card .card-gallery .product-media-container video,
+.product-card .card-gallery .product-media-container .deferred-media__poster-image {
+  object-fit: contain;
+  object-position: center;
+}
+
+.product-card .text-block,
+.product-card product-price .price {
+  color: var(--shopperz-charcoal);
+}
+
+.product-card product-price .price {
+  letter-spacing: -0.01em;
+}
+
+.product-card .product-badge,
+.product-card .badge {
+  border-radius: 3px;
+  box-shadow: none;
+}
+
+.product-card__content > .quick-add .quick-add__button {
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+/* Collection grid: four equal columns on desktop, two on mobile, without fighting Horizon's controls. */
+@media screen and (min-width: 990px) {
+  .main-collection-grid [product-grid-view='default'] .product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .main-collection-grid [product-grid-view='default'] .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Product and collection surfaces should read as one catalogue, not floating cards. */
+.product-grid__item,
+.resource-list__item {
+  background: transparent;
+}
+
+/* Cart: quiet hierarchy and strong checkout action. */
+.cart-page {
+  background: var(--shopperz-ivory);
+}
+
+.cart-page__summary {
+  border-inline-start: 1px solid var(--shopperz-rule);
+  padding-inline-start: clamp(1.25rem, 3vw, 3rem);
+}
+
+.cart-page__items {
+  border-top: 1px solid var(--shopperz-rule);
+}
+
+.cart-page__summary .button,
+.cart-page__summary button[type='submit'] {
+  background: var(--shopperz-charcoal);
+  color: var(--shopperz-ivory);
+  border-color: var(--shopperz-charcoal);
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+/* Footer: one restrained rule and calm typography. */
+.footer-section {
+  border-top: 1px solid var(--shopperz-rule);
+}
+
+.footer-content .text-block h2,
+.footer-content .menu__heading__default,
+.footer-content .email-signup__heading {
+  letter-spacing: 0;
+}
+
+.footer-content a:hover,
+.footer-content a:focus-visible {
+  color: var(--shopperz-gold);
+}
+
+/* Preserve accessible focus without introducing decorative UI. */
+:where(a, button, input, select, textarea, summary):focus-visible {
+  outline-color: var(--shopperz-gold);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #header-group .header-menu__link,
+  #header-group .header-actions__action,
+  #header-group .dropdown-localization__button {
+    transition: none;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .collection-list-shopperz-point .resource-list__item {
+    flex: 0 0 auto;
+  }
+
+  .cart-page__summary {
+    border-inline-start: 0;
+    border-top: 1px solid var(--shopperz-rule);
+    padding-inline-start: 0;
+    padding-block-start: 1.5rem;
+  }
+}
