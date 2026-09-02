@@ -12,82 +12,1003 @@
     "hero_jVaWmY": {
       "type": "hero",
       "blocks": {
-        "text_eyebrow": { "type": "text", "name": "t:names.text", "settings": { "text": "<p>SHOPPERZ POINT</p>", "alignment": "left", "type_preset": "custom", "font": "var(--font-body--family)", "font_size": "0.75rem", "letter_spacing": "loose", "case": "uppercase" }, "blocks": {} },
-        "text_heading": { "type": "text", "name": "t:names.heading", "settings": { "text": "<h1>Thoughtful gifts. Made for meaningful moments.</h1>", "alignment": "left", "type_preset": "h1", "font": "var(--font-heading--family)", "wrap": "pretty" }, "blocks": {} },
-        "text_description": { "type": "text", "name": "t:names.text", "settings": { "text": "<p>Thoughtfully chosen pieces for celebrations, connections and everyday moments.</p>", "alignment": "left", "type_preset": "paragraph", "font": "var(--font-body--family)" }, "blocks": {} },
-        "button_H9gpTf": { "type": "button", "name": "t:names.button", "settings": { "label": "SHOP GIFTS", "link": "shopify://collections/all", "style_class": "button" }, "blocks": {} }
+        "text_eyebrow": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>SHOPPERZ POINT</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_size": "0.75rem",
+            "line_height": "normal",
+            "letter_spacing": "loose",
+            "case": "uppercase",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_heading": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h1>Thoughtful gifts. Made for meaningful moments.</h1>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h1",
+            "font": "var(--font-heading--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_description": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>Thoughtfully chosen pieces for celebrations, connections and everyday moments.</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "paragraph",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "button_H9gpTf": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "SHOP GIFTS",
+            "link": "shopify://collections/all",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "custom_button_background": "{{ settings.color_palette.foreground }}",
+            "custom_button_text": "{{ settings.color_palette.background }}",
+            "custom_button_border": "{{ settings.color_palette.background }}",
+            "link_text_color": "",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        }
       },
-      "block_order": ["text_eyebrow", "text_heading", "text_description", "button_H9gpTf"],
+      "block_order": [
+        "text_eyebrow",
+        "text_heading",
+        "text_description",
+        "button_H9gpTf"
+      ],
       "name": "t:names.hero",
-      "settings": { "media_type_1": "image", "image_1": "shopify://shop_images/Gemini_Generated_Image_jrgd9rjrgd9rjrgd.png", "stack_media_on_mobile": true, "custom_mobile_media": true, "media_type_1_mobile": "image", "image_1_mobile": "shopify://shop_images/Gemini_Generated_Image_czz5v8czz5v8czz5.png", "enable_slideshow": true, "slideshow_controls_style": "dots", "slideshow_icons_style": "arrows_large", "slideshow_icons_shape": "none", "slideshow_autoplay": false, "editorial_layout": true, "content_direction": "column", "vertical_on_mobile": true, "horizontal_alignment": "space-between", "vertical_alignment": "flex-end", "gap": 20, "section_width": "page-width", "section_height": "large", "background_color": "{{ settings.color_palette.background }}", "toggle_overlay": false, "blurred_reflection": false }
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/Gemini_Generated_Image_jrgd9rjrgd9rjrgd.png",
+        "media_type_2": "image",
+        "stack_media_on_mobile": true,
+        "custom_mobile_media": true,
+        "media_type_1_mobile": "image",
+        "image_1_mobile": "shopify://shop_images/Gemini_Generated_Image_czz5v8czz5v8czz5.png",
+        "media_type_2_mobile": "image",
+        "enable_slideshow": true,
+        "slideshow_controls_style": "dots",
+        "slideshow_icons_style": "arrows_large",
+        "slideshow_icons_shape": "none",
+        "slideshow_autoplay": false,
+        "slideshow_autoplay_speed": 4,
+        "link": "",
+        "open_in_new_tab": false,
+        "editorial_layout": true,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "space-between",
+        "vertical_alignment": "flex-end",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 20,
+        "section_width": "page-width",
+        "section_height": "large",
+        "section_height_custom": 50,
+        "background_color": "{{ settings.color_palette.background }}",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
     },
     "collection_list_icrXHE": {
       "type": "collection-list",
       "blocks": {
-        "group_fJxfbz": { "type": "group", "name": "t:names.header", "settings": { "content_direction": "column", "horizontal_alignment_flex_direction_column": "center", "vertical_alignment_flex_direction_column": "center", "gap": 12, "width": "fill" }, "blocks": {
-          "text_eyebrow": { "type": "text", "name": "t:names.text", "settings": { "text": "<p>CURATED FOR YOU</p>", "alignment": "center", "type_preset": "custom", "font": "var(--font-subheading--family)", "font_size": "0.75rem", "letter_spacing": "loose", "case": "uppercase" }, "blocks": {} },
-          "text_8Vecy6": { "type": "text", "name": "t:names.text", "settings": { "text": "<h2>Shop by Category</h2>", "alignment": "center", "type_preset": "h2", "font": "var(--font-heading--family)" }, "blocks": {} },
-          "text_description": { "type": "text", "name": "t:names.text", "settings": { "text": "<p>Explore thoughtful finds for every kind of everyday.</p>", "alignment": "center", "type_preset": "paragraph", "font": "var(--font-body--family)" }, "blocks": {} }
-        }, "block_order": ["text_eyebrow", "text_8Vecy6", "text_description"] },
-        "static-collection-card": { "type": "_collection-card", "name": "t:names.collection_card", "static": true, "settings": { "placement": "below_image", "horizontal_alignment": "center", "collection_card_gap": 8, "border": "none", "border_radius": 0 }, "blocks": {
-          "collection_title_a94tYn": { "type": "collection-title", "name": "t:names.collection_title", "settings": { "alignment": "center", "type_preset": "custom", "font": "var(--font-subheading--family)", "font_size": "1rem" }, "blocks": {} },
-          "collection-card-image": { "type": "_collection-card-image", "name": "t:names.collection_card_image", "static": true, "settings": { "image_ratio": "square", "border": "none", "border_radius": 0 }, "blocks": {} }
-        }, "block_order": ["collection_title_a94tYn"] }
+        "group_fJxfbz": {
+          "type": "group",
+          "name": "t:names.header",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_eyebrow": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>CURATED FOR YOU</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "custom",
+                "font": "var(--font-subheading--family)",
+                "font_size": "0.75rem",
+                "line_height": "normal",
+                "letter_spacing": "loose",
+                "case": "uppercase",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_8Vecy6": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<h2>Shop by Category</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "h2",
+                "font": "var(--font-heading--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_description": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Explore thoughtful finds for every kind of everyday.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_eyebrow",
+            "text_8Vecy6",
+            "text_description"
+          ]
+        },
+        "static-collection-card": {
+          "type": "_collection-card",
+          "name": "t:names.collection_card",
+          "static": true,
+          "settings": {
+            "placement": "below_image",
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "collection_card_gap": 11,
+            "background_color": "{{ settings.color_palette.background }}",
+            "border": "none",
+            "border_width": 6,
+            "border_opacity": 50,
+            "border_color": "#898787",
+            "border_radius": 100
+          },
+          "blocks": {
+            "collection_title_a94tYn": {
+              "type": "collection-title",
+              "name": "t:names.collection_title",
+              "settings": {
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "custom",
+                "font": "var(--font-subheading--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "background": false,
+                "background_color": "{{ settings.color_palette.background }}",
+                "text_color": "{{ settings.color_palette.foreground }}",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "collection-card-image": {
+              "type": "_collection-card-image",
+              "name": "t:names.collection_card_image",
+              "static": true,
+              "settings": {
+                "image_ratio": "square",
+                "toggle_overlay": true,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "collection_title_a94tYn"
+          ]
+        }
       },
-      "block_order": ["group_fJxfbz"],
+      "block_order": [
+        "group_fJxfbz"
+      ],
       "name": "t:names.collections_grid",
-      "settings": { "collection_list": ["jwellery", "toys", "best-selling"], "layout_type": "grid", "carousel_on_mobile": true, "columns": 3, "mobile_columns": "3", "mobile_card_size": "30cqw", "columns_gap": 32, "rows_gap": 8, "max_collections": 4, "icons_style": "none", "icons_shape": "none", "section_width": "page-width", "gap": 32, "background_color": "", "padding-block-start": 48, "padding-block-end": 56 }
+      "settings": {
+        "collection_list": [
+          "jwellery",
+          "toys",
+          "best-selling",
+          "home-appliance",
+          "security-gadgets"
+        ],
+        "layout_type": "grid",
+        "carousel_on_mobile": true,
+        "columns": 3,
+        "mobile_columns": "3",
+        "mobile_card_size": "30cqw",
+        "columns_gap": 32,
+        "bento_gap": 8,
+        "rows_gap": 8,
+        "max_collections": 4,
+        "icons_style": "none",
+        "icons_shape": "none",
+        "section_width": "page-width",
+        "gap": 32,
+        "background_color": "",
+        "padding-block-start": 48,
+        "padding-block-end": 56
+      }
     },
     "product_list_featured": {
       "type": "product-list",
       "blocks": {
-        "static-header": { "type": "_product-list-content", "name": "t:names.header", "static": true, "settings": { "content_direction": "column", "vertical_on_mobile": true, "horizontal_alignment": "flex-start", "vertical_alignment": "flex-start", "gap": 10, "width": "fill", "height": "fit", "background_media": "none" }, "blocks": {
-          "eyebrow": { "type": "_product-list-text", "settings": { "text": "<p>CURATED FAVORITES</p>", "type_preset": "custom", "font": "var(--font-subheading--family)", "font_size": "0.75rem", "letter_spacing": "loose", "case": "uppercase" }, "blocks": {} },
-          "title": { "type": "_product-list-text", "settings": { "text": "<h2>Featured Products</h2>", "type_preset": "h2", "font": "var(--font-heading--family)" }, "blocks": {} },
-          "description": { "type": "_product-list-text", "settings": { "text": "<p>Thoughtful finds selected to make gifting feel effortless.</p>", "type_preset": "paragraph", "font": "var(--font-body--family)" }, "blocks": {} },
-          "button": { "type": "_product-list-button", "settings": { "label": "View all", "style_class": "link" }, "blocks": {} }
-        }, "block_order": ["eyebrow", "title", "description", "button"] },
-        "static-product-card": { "type": "_product-card", "name": "t:names.product_card", "static": true, "settings": { "product_card_gap": 8, "border": "none", "border_radius": 0 }, "blocks": {
-          "gallery": { "type": "_product-card-gallery", "settings": { "image_ratio": "adapt", "border": "none", "border_radius": 0 }, "blocks": {} },
-          "product_title": { "type": "product-title", "settings": { "width": "100%", "alignment": "left", "type_preset": "rte", "font": "var(--font-body--family)", "font_size": "1rem", "padding-block-start": 8 }, "blocks": {} },
-          "price": { "type": "price", "settings": { "show_sale_price_first": true, "show_installments": false, "show_tax_info": false, "type_preset": "h5", "width": "100%", "alignment": "left", "font": "var(--font-body--family)" }, "blocks": {} }
-        }, "block_order": ["gallery", "product_title", "price"] }
+        "static-header": {
+          "type": "_product-list-content",
+          "name": "t:names.header",
+          "static": true,
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-start",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 10,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "eyebrow": {
+              "type": "_product-list-text",
+              "settings": {
+                "text": "<p>CURATED FAVORITES</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-subheading--family)",
+                "font_size": "0.75rem",
+                "line_height": "normal",
+                "letter_spacing": "loose",
+                "case": "uppercase",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "title": {
+              "type": "_product-list-text",
+              "settings": {
+                "text": "<h2>Featured Products</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h2",
+                "font": "var(--font-heading--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "description": {
+              "type": "_product-list-text",
+              "settings": {
+                "text": "<p>Thoughtful finds selected to make gifting feel effortless.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "button": {
+              "type": "_product-list-button",
+              "settings": {
+                "label": "View all",
+                "open_in_new_tab": false,
+                "style_class": "link",
+                "custom_button_background": "{{ settings.color_palette.foreground }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.background }}",
+                "link_text_color": "",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "eyebrow",
+            "title",
+            "description",
+            "button"
+          ]
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "name": "t:names.product_card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 8,
+            "background_color": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "gallery": {
+              "type": "_product-card-gallery",
+              "settings": {
+                "image_ratio": "adapt",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "product_title": {
+              "type": "product-title",
+              "settings": {
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 8,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "price": {
+              "type": "price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_installments": false,
+                "show_tax_info": false,
+                "type_preset": "h5",
+                "width": "100%",
+                "alignment": "left",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "text_color": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "gallery",
+            "product_title",
+            "price"
+          ]
+        }
       },
       "name": "t:names.product_list",
-      "settings": { "collection": "best-selling", "layout_type": "grid", "carousel_on_mobile": true, "max_products": 8, "columns": 4, "mobile_columns": "2", "mobile_card_size": "44cqw", "columns_gap": 24, "rows_gap": 28, "icons_style": "arrow", "icons_shape": "none", "section_width": "page-width", "horizontal_alignment": "flex-start", "gap": 40, "background_color": "{{ settings.color_palette.background }}", "padding-block-start": 48, "padding-block-end": 48 }
+      "settings": {
+        "collection": "best-selling",
+        "layout_type": "grid",
+        "carousel_on_mobile": true,
+        "max_products": 8,
+        "columns": 4,
+        "mobile_columns": "2",
+        "mobile_card_size": "44cqw",
+        "columns_gap": 24,
+        "rows_gap": 28,
+        "icons_style": "arrow",
+        "icons_shape": "none",
+        "section_width": "page-width",
+        "horizontal_alignment": "flex-start",
+        "gap": 40,
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
     },
     "editorial_story": {
       "type": "media-with-content",
       "blocks": {
-        "media": { "type": "_media-without-appearance", "static": true, "settings": { "media_type": "image", "image": "shopify://shop_images/Gemini_Generated_Image_jrgd9rjrgd9rjrgd.png", "image_position": "contain" } },
-        "content": { "type": "_content-without-appearance", "static": true, "settings": { "horizontal_alignment_flex_direction_column": "flex-start", "vertical_alignment_flex_direction_column": "center", "gap": 20 }, "blocks": {
-          "eyebrow": { "type": "text", "settings": { "text": "<p>THE SHOPPERZ POINT STORY</p>", "type_preset": "custom", "font": "var(--font-subheading--family)", "font_size": "0.75rem", "letter_spacing": "loose", "case": "uppercase" }, "blocks": {} },
-          "heading": { "type": "text", "settings": { "text": "<h2>Gifts chosen with intention.</h2>", "type_preset": "h2", "font": "var(--font-heading--family)" }, "blocks": {} },
-          "body": { "type": "text", "settings": { "text": "<p>Shopperz Point brings together thoughtful gifts and everyday pieces with a focus on meaning, usefulness and the joy of giving.</p>", "type_preset": "rte", "font": "var(--font-body--family)" }, "blocks": {} }
-        }, "block_order": ["eyebrow", "heading", "body"] }
+        "media": {
+          "type": "_media-without-appearance",
+          "static": true,
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Gemini_Generated_Image_jrgd9rjrgd9rjrgd.png",
+            "link": "",
+            "video_loop": true,
+            "video_autoplay": false,
+            "image_position": "contain",
+            "video_position": "cover"
+          },
+          "blocks": {}
+        },
+        "content": {
+          "type": "_content-without-appearance",
+          "static": true,
+          "settings": {
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 20
+          },
+          "blocks": {
+            "eyebrow": {
+              "type": "text",
+              "settings": {
+                "text": "<p>THE SHOPPERZ POINT STORY</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-subheading--family)",
+                "font_size": "0.75rem",
+                "line_height": "normal",
+                "letter_spacing": "loose",
+                "case": "uppercase",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>Gifts chosen with intention.</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h2",
+                "font": "var(--font-heading--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "body": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Shopperz Point brings together thoughtful gifts and everyday pieces with a focus on meaning, usefulness and the joy of giving.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "eyebrow",
+            "heading",
+            "body"
+          ]
+        }
       },
       "name": "t:names.media_with_text",
-      "settings": { "media_position": "left", "media_width": "medium", "media_height": "auto", "section_width": "page-width", "extend_media": false, "background_color": "", "padding-block-start": 24, "padding-block-end": 24 }
+      "settings": {
+        "media_position": "left",
+        "media_width": "medium",
+        "media_height": "auto",
+        "section_width": "page-width",
+        "extend_media": false,
+        "background_color": "",
+        "padding-block-start": 24,
+        "padding-block-end": 24
+      }
     },
     "product_list_more": {
       "type": "product-list",
       "blocks": {
-        "static-header": { "type": "_product-list-content", "static": true, "settings": { "content_direction": "column", "vertical_on_mobile": true, "horizontal_alignment": "flex-start", "vertical_alignment": "flex-start", "gap": 10, "width": "fill", "height": "fit", "background_media": "none" }, "blocks": {
-          "eyebrow": { "type": "_product-list-text", "settings": { "text": "<p>EXPLORE MORE</p>", "type_preset": "custom", "font": "var(--font-subheading--family)", "font_size": "0.75rem", "letter_spacing": "loose", "case": "uppercase" }, "blocks": {} },
-          "title": { "type": "_product-list-text", "settings": { "text": "<h2>More Products</h2>", "type_preset": "h2", "font": "var(--font-heading--family)" }, "blocks": {} },
-          "description": { "type": "_product-list-text", "settings": { "text": "<p>More pieces to discover, choose and give with intention.</p>", "type_preset": "paragraph", "font": "var(--font-body--family)" }, "blocks": {} },
-          "button": { "type": "_product-list-button", "settings": { "label": "Shop all", "style_class": "link" }, "blocks": {} }
-        }, "block_order": ["eyebrow", "title", "description", "button"] },
-        "static-product-card": { "type": "_product-card", "static": true, "settings": { "product_card_gap": 8, "border": "none", "border_radius": 0 }, "blocks": {
-          "gallery": { "type": "_product-card-gallery", "settings": { "image_ratio": "adapt", "border": "none", "border_radius": 0 }, "blocks": {} },
-          "product_title": { "type": "product-title", "settings": { "width": "100%", "alignment": "left", "type_preset": "rte", "font": "var(--font-body--family)", "font_size": "1rem", "padding-block-start": 8 }, "blocks": {} },
-          "price": { "type": "price", "settings": { "show_sale_price_first": true, "show_installments": false, "show_tax_info": false, "type_preset": "h5", "width": "100%", "alignment": "left", "font": "var(--font-body--family)" }, "blocks": {} }
-        }, "block_order": ["gallery", "product_title", "price"] }
+        "static-header": {
+          "type": "_product-list-content",
+          "static": true,
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-start",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 10,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "eyebrow": {
+              "type": "_product-list-text",
+              "settings": {
+                "text": "<p>EXPLORE MORE</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-subheading--family)",
+                "font_size": "0.75rem",
+                "line_height": "normal",
+                "letter_spacing": "loose",
+                "case": "uppercase",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "title": {
+              "type": "_product-list-text",
+              "settings": {
+                "text": "<h2>More Products</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h2",
+                "font": "var(--font-heading--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "description": {
+              "type": "_product-list-text",
+              "settings": {
+                "text": "<p>More pieces to discover, choose and give with intention.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "button": {
+              "type": "_product-list-button",
+              "settings": {
+                "label": "Shop all",
+                "open_in_new_tab": false,
+                "style_class": "link",
+                "custom_button_background": "{{ settings.color_palette.foreground }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.background }}",
+                "link_text_color": "",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "eyebrow",
+            "title",
+            "description",
+            "button"
+          ]
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 8,
+            "background_color": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "gallery": {
+              "type": "_product-card-gallery",
+              "settings": {
+                "image_ratio": "adapt",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "product_title": {
+              "type": "product-title",
+              "settings": {
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 8,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "price": {
+              "type": "price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_installments": false,
+                "show_tax_info": false,
+                "type_preset": "h5",
+                "width": "100%",
+                "alignment": "left",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "text_color": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "gallery",
+            "product_title",
+            "price"
+          ]
+        }
       },
       "name": "t:names.product_list",
-      "settings": { "collection": "all", "layout_type": "grid", "carousel_on_mobile": true, "max_products": 8, "columns": 4, "mobile_columns": "2", "mobile_card_size": "44cqw", "columns_gap": 24, "rows_gap": 28, "icons_style": "arrow", "icons_shape": "none", "section_width": "page-width", "horizontal_alignment": "flex-start", "gap": 40, "background_color": "{{ settings.color_palette.background }}", "padding-block-start": 48, "padding-block-end": 48 }
+      "settings": {
+        "collection": "all",
+        "layout_type": "grid",
+        "carousel_on_mobile": true,
+        "max_products": 8,
+        "columns": 4,
+        "mobile_columns": "2",
+        "mobile_card_size": "44cqw",
+        "columns_gap": 24,
+        "rows_gap": 28,
+        "icons_style": "arrow",
+        "icons_shape": "none",
+        "section_width": "page-width",
+        "horizontal_alignment": "flex-start",
+        "gap": 40,
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
     },
-    "trust_message": { "type": "custom-liquid", "settings": { "custom_liquid": "<div class=\"shopperz-trust-message\"><p class=\"shopperz-trust-eyebrow\">A LITTLE MORE MEANING</p><h2>Make every moment feel special.</h2><p>Beautifully chosen gifts, thoughtful details and a little inspiration for the people who matter.</p></div>", "background_color": "#F3EFE7", "section_width": "full-width", "padding-block-start": 56, "padding-block-end": 56 } }
+    "trust_message": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"shopperz-trust-message\"><p class=\"shopperz-trust-eyebrow\">A LITTLE MORE MEANING</p><h2>Make every moment feel special.</h2><p>Beautifully chosen gifts, thoughtful details and a little inspiration for the people who matter.</p></div>",
+        "background_color": "#f3efe7",
+        "section_width": "full-width",
+        "padding-block-start": 56,
+        "padding-block-end": 56
+      }
+    }
   },
-  "order": ["hero_jVaWmY", "collection_list_icrXHE", "product_list_featured", "editorial_story", "product_list_more", "trust_message"]
+  "order": [
+    "hero_jVaWmY",
+    "collection_list_icrXHE",
+    "product_list_featured",
+    "editorial_story",
+    "product_list_more",
+    "trust_message"
+  ]
 }
