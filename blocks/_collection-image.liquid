@@ -48,12 +48,15 @@
 
 {% stylesheet %}
   .collection-image {
-    width: var(--image-width);
+    width: 70%;
+    margin-inline: auto;
   }
 
   .collection-image .collection-image__featured-image {
-    aspect-ratio: var(--ratio);
+    aspect-ratio: 1;
     object-fit: cover;
+    border-radius: 50%;
+    display: block;
   }
 {% endstylesheet %}
 
@@ -99,7 +102,7 @@
       "max": 100,
       "step": 1,
       "unit": "%",
-      "default": 10,
+      "default": 100,
       "visible_if": "{{ block.settings.image_ratio == 'custom' }}"
     },
     {
@@ -110,7 +113,7 @@
       "max": 100,
       "step": 1,
       "unit": "%",
-      "default": 10,
+      "default": 100,
       "visible_if": "{{ block.settings.image_ratio == 'custom' }}"
     },
     {
