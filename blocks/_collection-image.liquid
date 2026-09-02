@@ -51,14 +51,17 @@
   .collection-image {
     width: 70% !important;
     margin-inline: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    overflow: hidden !important;
+    border-radius: 50% !important;
   }
 
   .collection-image .collection-image__featured-image {
     width: 100% !important;
-    height: auto !important;
+    height: 100% !important;
     aspect-ratio: 1 / 1 !important;
     object-fit: cover !important;
-    border-radius: 50% !important;
+    border-radius: 0 !important;
     display: block !important;
   }
 {% endstylesheet %}
