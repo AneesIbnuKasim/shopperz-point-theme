@@ -157,8 +157,8 @@
           "static": true,
           "settings": {
             "product_card_gap": 2,
-            "background_color": "",
-            "border": "none",
+            "background_color": "rgba(0,0,0,0)",
+            "border": "solid",
             "border_width": 1,
             "border_opacity": 100,
             "border_color": "",
