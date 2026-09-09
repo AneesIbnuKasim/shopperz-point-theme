@@ -163,10 +163,10 @@
             "border_opacity": 37,
             "border_color": "{{ settings.color_palette.color2 }}",
             "border_radius": 5,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-block-start": 2,
+            "padding-block-end": 16,
+            "padding-inline-start": 2,
+            "padding-inline-end": 2
           },
           "blocks": {
             "card-gallery": {
