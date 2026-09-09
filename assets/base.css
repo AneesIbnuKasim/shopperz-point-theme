@@ -875,6 +875,10 @@ button.shopify-payment-button__button--unbranded {
   border-radius: var(--style-border-radius-buttons-primary);
 }
 
+.offerbadge {
+  color: #000000 !important;
+}
+
 textarea,
 input:not([type='checkbox'], [type='radio']) {
   background-color: var(--color-input-background);
